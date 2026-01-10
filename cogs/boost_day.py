@@ -109,7 +109,7 @@ class BoostDayCog(commands.GroupCog, name='boostday'):
     else:
       proposal_list = "\n".join([
         f"• **{p.target_date.isoformat()}** （於 <t:{int(p.created_at.timestamp())}:f> 提交）"
-        for p in sorted(proposals)
+        for p in sorted(proposals, key=lambda x: x.target_date)
       ])
       embed = info_embed(
           title=f"你的加成日提案：{month_key}",

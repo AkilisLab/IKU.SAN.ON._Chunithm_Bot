@@ -28,7 +28,6 @@ def _load_state():
       return json.load(f)
   except FileNotFoundError:
     return {}
-  
 
 def _save_state(tp_msg_channel_id: int | None, tp_msg_msg_id: int | None):
   with open(STATE_FILE, 'w') as f:

@@ -34,3 +34,7 @@ class MessageNotFoundException(TeamPointError):
 class NoTeamPointMessageSetException(TeamPointError):
     details = "No team point message has been set"
     message = "尚未設定團隊積分訊息的位置。請使用 /設定團隊積分訊息 指令來設定。"
+
+class ChannelNotFoundException(TeamPointError):
+    details = "Specified channel not found"
+    message = "找不到指定的頻道。請確認頻道ID是否正確，或該頻道是否存在。"
